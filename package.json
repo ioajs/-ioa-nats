@@ -1,0 +1,27 @@
+{
+  "name": "@ioa/nats",
+  "version": "9.7.2",
+  "description": "nats 消息队列 ioa 组件",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "ioa-router": "^9.7.3",
+    "nats": "^1.3.2"
+  },
+  "devDependencies": {
+    "@ioa/config": "^9.5.0",
+    "ioa": "^9.7.1",
+    "zpromise": "^1.5.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "files": [
+    "lib",
+    "!lib/node_modules"
+  ],
+  "license": "ISC"
+}
