@@ -1,3 +1,3 @@
 # @ioa/nats
 
-nats 消息队列 ioa 组件
+ioa 消息队列 nats 组件
