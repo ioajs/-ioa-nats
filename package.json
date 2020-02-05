@@ -1,18 +1,18 @@
 {
   "name": "@ioa/nats",
-  "version": "9.7.3",
+  "version": "9.7.5",
   "description": "nats 消息队列 ioa 组件",
   "main": "index.js",
   "directories": {
     "lib": "lib"
   },
   "dependencies": {
-    "ioa-router": "^9.7.3",
-    "nats": "^1.3.2"
+    "ioa-router": "^9.7.4",
+    "nats": "^1.4.0"
   },
   "devDependencies": {
     "@ioa/config": "^9.5.0",
-    "ioa": "^9.7.4",
+    "ioa": "^9.7.5",
     "zpromise": "^1.5.3"
   },
   "scripts": {
@@ -20,8 +20,7 @@
   },
   "author": "",
   "files": [
-    "lib",
-    "!lib/node_modules"
+    "lib"
   ],
   "license": "ISC"
 }
