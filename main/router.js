@@ -2,11 +2,11 @@
 
 const app = require('@app');
 
-const { routeron, rpc } = app;
+const { mrouter, rpc } = app;
 
-routeron.get('user', 'token', 'user.find');
+mrouter.get('user', 'token', 'user.find');
 
-routeron.put('user', 'token', 'user.update');
+mrouter.put('user', 'token', 'user.update');
 
 /**
  * 发送测试请求

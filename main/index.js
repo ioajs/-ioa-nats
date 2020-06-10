@@ -2,6 +2,6 @@
 
 const app = require('@app');
 
-app.on('@ioa/config');
+app.use('@ioa/config');
 
-app.on('./lib');
+app.use('./lib');
