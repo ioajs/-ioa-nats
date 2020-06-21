@@ -1,6 +1,6 @@
 'use strict';
 
-const { rpc } = require('@app');
+const { nats } = require('@app');
 
 class User {
    async find(ctx) {
@@ -9,7 +9,7 @@ class User {
 
       console.log(body);
 
-      const update = await rpc.put("user", { m: 6 });
+      const update = await nats.put("user", { m: 6 });
 
       console.log(update);
 
@@ -25,7 +25,7 @@ class User {
 
       console.log(body);
 
-      ctx.body = { t: 888 }
+      ctx.body = { t: 888 };
 
    }
 }

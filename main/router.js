@@ -2,9 +2,9 @@
 
 const app = require('@app');
 
-const { mrouter, rpc } = app;
+const { mrouter, nats } = app;
 
-mrouter.get('user', 'token', 'user.find');
+mrouter.get('/user/test', 'token', 'user.find');
 
 mrouter.put('user', 'token', 'user.update');
 
@@ -12,6 +12,9 @@ mrouter.put('user', 'token', 'user.update');
  * 发送测试请求
  */
 setTimeout(async () => {
-   const data = await rpc.get("user");
+
+   const data = await nats.get("/user/test");
+
    console.log(data);
-}, 1000);
+   
+}, 500);

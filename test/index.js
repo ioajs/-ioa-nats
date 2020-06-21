@@ -3,7 +3,7 @@
 const Nats = require('nats');
 
 const nats = Nats.connect({
-   "url": "nats://120.79.173.187:4222",
+   "url": "nats://8.129.183.107:4222",
    "token": "zhijian2019", 
    "json": true,
 });
@@ -18,7 +18,7 @@ async function main() {
 
    const result = await new Promise(function (resolve) {
 
-      nats.request('@user', data, { timeout: 2000 }, resolve);
+      nats.request('/GET/user/test', data, { timeout: 2000 }, resolve);
       
    }).then(function (result) {
       if (result instanceof Error) {
