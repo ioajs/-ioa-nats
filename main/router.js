@@ -2,11 +2,11 @@
 
 const app = require('@app');
 
-const { mrouter, nats } = app;
+const { nrouter, nats } = app;
 
-mrouter.get('/user/test', 'token', 'user.find');
+nrouter.get('/user/test', 'token', 'test', 'user.find');
 
-mrouter.put('user', 'token', 'user.update');
+nrouter.put('user', 'token', 'user.update');
 
 /**
  * 发送测试请求
@@ -16,5 +16,13 @@ setTimeout(async () => {
    const data = await nats.get("/user/test");
 
    console.log(data);
-   
+
+   nats.post("/user/test");
+
+   nats.put("/user/test");
+
+   await nats.delete("/user/test", { timeout: 3000 });
+
+   console.log('end')
+
 }, 500);

@@ -18,9 +18,10 @@ async function main() {
 
    const result = await new Promise(function (resolve) {
 
-      nats.request('/GET/user/test', data, { timeout: 2000 }, resolve);
+      nats.request('GET:/user/test', data, { timeout: 2000 }, resolve);
       
    }).then(function (result) {
+
       if (result instanceof Error) {
          return {
             code: 1000,
@@ -29,6 +30,7 @@ async function main() {
       } else {
          return result;
       }
+      
    });
 
    console.log(result);

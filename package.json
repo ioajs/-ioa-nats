@@ -1,6 +1,6 @@
 {
   "name": "@ioa/nats",
-  "version": "9.8.0",
+  "version": "9.8.1",
   "description": "nats 消息队列 ioa 组件",
   "main": "index.js",
   "directories": {
