@@ -2,7 +2,7 @@
 
 module.exports = async function (ctx, next) {
 
-   console.log('test middleware');
+   ctx.test = "test middleware";
 
    await next();
    

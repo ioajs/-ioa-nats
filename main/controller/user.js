@@ -7,23 +7,46 @@ class User {
 
       const { body } = ctx.request;
 
-      console.log(body);
-
-      const update = await nats.put("user", { m: 6 });
-
-      console.log(update);
-
       ctx.body = {
          code: 0,
-         result: 888
-      }
+         data: 888,
+         test: ctx.test,
+         token: ctx.token
+      };
+
+   }
+   async findPk(ctx) {
+
+      const { params } = ctx;
+
+      ctx.body = {
+         method: "findPk",
+         params
+      };
+
+   }
+   async create(ctx) {
+
+      const { body } = ctx.request;
+
+      ctx.body = body;
 
    }
    async update(ctx) {
 
+      const { params } = ctx;
+
       const { body } = ctx.request;
 
-      console.log(body);
+      ctx.body = {
+         params,
+         body
+      };
+
+   }
+   async delete(ctx) {
+
+      const { body } = ctx.request;
 
       ctx.body = { t: 888 };
 

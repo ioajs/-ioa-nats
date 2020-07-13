@@ -2,7 +2,7 @@
 
 module.exports = async function (ctx, next) {
 
-   console.log('token middleware');
+   ctx.token = "token middleware";
 
    await next();
    

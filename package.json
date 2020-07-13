@@ -1,13 +1,13 @@
 {
   "name": "@ioa/nats",
-  "version": "9.8.1",
+  "version": "9.8.2",
   "description": "nats 消息队列 ioa 组件",
   "main": "index.js",
   "directories": {
     "lib": "lib"
   },
   "dependencies": {
-    "ioa-router": "^9.7.7",
+    "ioa-router": "^9.8.0",
     "nats": "^1.4.9"
   },
   "devDependencies": {

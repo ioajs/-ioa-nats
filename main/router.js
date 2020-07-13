@@ -2,27 +2,17 @@
 
 const app = require('@app');
 
-const { nrouter, nats } = app;
+const { nrouter } = app;
 
-nrouter.get('/user/test', 'token', 'test', 'user.find');
+nrouter.get('/user', 'token', 'test', 'user.find');
 
-nrouter.put('user', 'token', 'user.update');
+nrouter.get('/user/:id', 'token', 'test', 'user.findPk');
 
-/**
- * 发送测试请求
- */
-setTimeout(async () => {
+nrouter.post('/user', 'token', 'user.create');
 
-   const data = await nats.get("/user/test");
+nrouter.put('/user/:id', 'token', 'user.update');
 
-   console.log(data);
+nrouter.delete('/user/:id', 'token', 'user.delete');
 
-   nats.post("/user/test");
 
-   nats.put("/user/test");
-
-   await nats.delete("/user/test", { timeout: 3000 });
-
-   console.log('end')
-
-}, 500);
+nrouter.get('/test', 'token', 'test.find');
