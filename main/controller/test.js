@@ -1,8 +1,4 @@
-'use strict';
-
-const { nats } = require('@app');
-
-module.exports = class {
+export default class {
    async find(ctx) {
 
       console.log()

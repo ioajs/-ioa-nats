@@ -1,9 +1,7 @@
-"use strict";
+import test from 'jtm';
+import ioa from 'ioa';
 
-const ioa = require('ioa');
-const test = require('jmr');
-
-ioa.app("./main");
+await ioa.loadApp("./main");
 
 test.nats = ioa.main.nats;
 

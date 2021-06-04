@@ -1,6 +1,6 @@
-'use strict';
+import ioa from 'ioa';
 
-const app = require('@app');
+const { app } = ioa;
 
 const { nrouter } = app;
 
@@ -13,6 +13,5 @@ nrouter.post('/user', 'token', 'user.create');
 nrouter.put('/user/:id', 'token', 'user.update');
 
 nrouter.delete('/user/:id', 'token', 'user.delete');
-
 
 nrouter.get('/test', 'token', 'test.find');

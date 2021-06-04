@@ -1,6 +1,6 @@
-'use strict';
+import ioa from 'ioa';
 
-const app = require('@app');
+const { app } = ioa;
 
 app.use('@ioa/config');
 app.use('./lib');

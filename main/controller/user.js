@@ -1,7 +1,3 @@
-'use strict';
-
-const { nats } = require('@app');
-
 class User {
    async find(ctx) {
 
@@ -53,4 +49,4 @@ class User {
    }
 }
 
-module.exports = User;
+export default User;
