@@ -1,6 +1,6 @@
 {
   "name": "@ioa/nats",
-  "version": "11.0.1",
+  "version": "11.0.2",
   "type": "module",
   "description": "nats 消息队列 ioa 组件",
   "main": "index.js",
@@ -12,8 +12,8 @@
     "nats": "^2.0.6"
   },
   "devDependencies": {
-    "@ioa/config": "^11.0.3",
-    "ioa": "^11.0.6"
+    "@ioa/config": "^11.0.4",
+    "ioa": "^11.0.10"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
