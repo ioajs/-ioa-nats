@@ -1,3 +1,3 @@
 import ioa from 'ioa';
 
-ioa.loadApp("./main");
+ioa.apps("./main");

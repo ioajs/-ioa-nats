@@ -1,6 +1,6 @@
 import ioa from 'ioa';
 
-const { app } = ioa;
+const app = ioa.app();
 
 const { nrouter } = app;
 
