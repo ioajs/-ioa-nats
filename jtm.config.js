@@ -1,12 +1,12 @@
 import test from 'jtm';
-import ioa from 'ioa';
+import ioa, { createApp } from 'ioa';
 
-await ioa.apps("./main");
+await createApp({ main: "./main" });
 
-console.log(ioa.main.nats)
+// console.log(ioa.main.nats);
 
 test.nats = ioa.main.nats;
 
-test.sleep = function(time = 0) {
+test.sleep = function (time = 0) {
   return new Promise(resolve => setTimeout(resolve, time));
 }

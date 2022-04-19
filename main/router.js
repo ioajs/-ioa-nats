@@ -1,8 +1,6 @@
-import ioa from 'ioa';
+import {main} from 'ioa';
 
-const app = ioa.app();
-
-const { nrouter } = app;
+const { nrouter } = main;
 
 nrouter.get('/user', 'token', 'test', 'user.find');
 
